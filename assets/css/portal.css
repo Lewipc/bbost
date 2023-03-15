@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background: #1a1a1d;
+}
+
+#form {
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 23%;
+    width: 350px;
+    padding:45px 30px 15px;
+    position: fixed;
+    box-shadow: 5px 5px 25px rgba(0,0,0,.2);
+    border-radius: 10px;
+    background-color: #343434;
+    height: 400px;
+    overflow: hidden
+}
+
+
+#form #toggle-forms{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    overflow: hidden;
+    z-index: 99
+}
+
+#form #toggle-forms > button {
+    border:none;
+    background:none;
+    background-color: #990833;
+    border: 0.7px solid #22303e;
+    color: #fff;
+    float:left;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:2px 10px;
+}
+
+#form #toggle-forms > button:first-of-type{
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#form #toggle-forms > button.active {
+    background-color: #c3073f;
+}
+
+#form form h4{
+    text-transform: capitalize
+}
+
+.input-field label.active {
+    color: #FFF !important;
+    font-size: 1.1rem
+}
+
+#form form input:focus {
+    border-bottom-color: #c3073f !important
+}
+
+#form .row >button{
+    background-color: #c3073f;
+}
+
+input {
+    color: #FFF;
+    padding-left: 15px !important
+}
+
+#form form{
+    padding:45px 30px 15px;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #343434;
+    transition: all .3s linear;
+    z-index: 2
+}
+
+#form form:last-of-type {
+    left: 100%
+}
+
+#form.active form:first-of-type {
+    left: -100% !important
+}
+
+#form.active form:last-of-type{
+    left:0 !important
+}
+
+@media (max-width: 767px) {
+    #form {
+        width: 290px !important;
+    }
+}
+
+.submit {
+    border-radius: 17px;
+}
+
+.animate {
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.animate > li {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 100%;
+    left: 10px;
+    background-color:  rgba(255,255,255,.1);
+    z-index: -1;
+    overflow: hidden;
+    -webkit-animation: move 10s linear infinite;
+            animation: move 10s linear infinite
+}
+
+.animate > li:nth-last-of-type(2) {
+    left: 70px;
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s;
+    height: 15px;
+    width: 15px;
+}
+
+.animate > li:nth-last-of-type(3) {
+    left: 140px;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s
+}
+
+.animate > li:nth-last-of-type(4) {
+    left: 210px;
+    -webkit-animation-delay: 5.5s;
+            animation-delay: 5.5s
+}
+
+.animate > li:nth-last-of-type(5) {
+    left: 280px;
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
+    height: 65px;
+    width: 65px
+}
+
+.animate > li:nth-last-of-type(6) {
+    left: 140px;
+    -webkit-animation-delay: 6.8s;
+            animation-delay: 6.8s;
+    height: 25px;
+    width: 25px
+}
+
+.animate > li:nth-last-of-type(7) {
+    left: 280px;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    height: 35px;
+    width: 35px
+}
+
+
+@-webkit-keyframes move {
+    to {top: -50px;transform: rotate(360deg)}
+}
+
+
+@keyframes move {
+    to {top: -50px;transform: rotate(360deg)}
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#form-title{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    position: fixed;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+ background-color:transparent;
+ border:none;
+ border-bottom:1px solid #9e9e9e;
+ border-radius:0;
+ outline:none;
+ height:3rem;
+ width:95%;
+}
